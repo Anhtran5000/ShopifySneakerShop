@@ -18,4 +18,35 @@ AOV= Total Sum of Revenue/ Total Sum of Order Amount
 AOV= $15,725,640/ $43,936
 
 c. What is its value?
-$357.9215222
+$357.92
+
+
+Question 2: 
+How many orders were shipped by Speedy Express in total?
+54 orders were shipped by Speedy Express
+
+SELECT * FROM orders
+Join Shippers 
+ON [Shippers]. ShipperID = [Orders]. ShipperID
+Where ShipperName = "Speedy Express"
+
+What is the last name of the employee with the most orders?
+40- Peacock
+
+SELECT [Employees]. LastName, Count(*)
+From Orders
+Join [Employees]
+ON [Orders]. EmployeeID = [Employees]. EmployeeID
+GROUP BY [Employees]. LastName 
+
+What product was ordered the most by customers in Germany?
+
+Boston Crab Meat
+
+SELECT p.ProductName, SUM(Quantity) AS TotalQuantity
+FROM Orders AS o, OrderDetails AS od, Customers AS c, Products AS p
+WHERE c.Country = "Germany" AND od.OrderID = o.OrderID AND od.ProductID = p.ProductID AND c.CustomerID = o.CustomerID
+GROUP BY p.ProductID
+ORDER BY TotalQuantity DESC
+LIMIT 1;
+
