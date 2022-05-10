@@ -1,0 +1,21 @@
+On Shopify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. 
+We want to do some analysis of the average order value (AOV). 
+When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. 
+Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis. 
+
+
+a. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data. 
+
+The calculations are wrong because initally used is incorrect where they calucated with using the total revenue/the number of order number, which resulted in $3145.13 
+
+To find the AOV, can always double check for the formula
+
+
+b. What metric would you report for this dataset?
+
+AOV= Total Sum of Revenue/ Total Sum of Order Amount
+
+AOV= $15,725,640/ $43,936
+
+c. What is its value?
+$357.9215222
